@@ -1,0 +1,143 @@
+* Reset & General Styles */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background: #f5f6fa;
+}
+
+/* Dashboard Layout */
+.dashboard {
+   display: grid;
+   grid-template-columns: 250px 1fr;
+   min-height: 100vh;
+}
+
+/* Navigation Sidebar */
+nav {
+   background: #2c3e50;
+   padding: 1.5rem;
+   color: #fff;
+}
+
+.logo {
+   margin-bottom: 2rem;
+   text-align: center;
+}
+
+.logo img {
+   width: 120px;
+   height: auto;
+}
+
+nav ul {
+   list-style: none;
+   margin-bottom: 2rem;
+}
+
+nav ul li {
+   margin-bottom: 0.5rem;
+}
+
+nav ul li a {
+   color: #ecf0f1;
+   text-decoration: none;
+   display: block;
+   padding: 0.8rem 1rem;
+   border-radius: 8px;
+   transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+   background: #34495e;
+}
+
+.user-info {
+   border-top: 1px solid #34495e;
+   padding-top: 1rem;
+}
+
+.user-info span {
+   display: block;
+   margin-bottom: 1rem;
+}
+
+.logout-btn {
+   background: #e74c3c;
+   color: white;
+   padding: 0.5rem 1rem;
+   border-radius: 5px;
+   text-decoration: none;
+   display: inline-block;
+   transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+   background: #c0392b;
+}
+
+/* Main Content */
+main {
+   padding: 2rem;
+}
+
+h1 {
+   color: #2c3e50;
+   margin-bottom: 2rem;
+}
+
+.welcome-card {
+   background: white;
+   padding: 2rem;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   margin-bottom: 2rem;
+}
+
+.welcome-card h2 {
+   color: #2c3e50;
+   margin-bottom: 1rem;
+}
+
+.welcome-card p {
+   color: #7f8c8d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .dashboard {
+       grid-template-columns: 1fr;
+   }
+   
+   nav {
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       padding: 1rem;
+       z-index: 100;
+   }
+
+   nav ul {
+       display: flex;
+       justify-content: space-around;
+       margin-bottom: 0;
+   }
+
+   nav ul li {
+       margin: 0;
+   }
+
+   .logo, .user-info {
+       display: none;
+   }
+
+   main {
+       margin-bottom: 80px;
+   }
+}
